@@ -1,7 +1,8 @@
 import os
 from shlex import quote
 
-# Trim videos into 2-min long
+# Trim videos into 2-min long to economize computational resources
+# This step could take place after deduplication
 # Use the following bash code to get ffmpeg
 # export PATH=/software/ffmpeg:/software/ffmpeg/bin:$PATH
 
