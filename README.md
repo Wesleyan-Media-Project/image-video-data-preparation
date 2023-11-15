@@ -16,7 +16,7 @@ This repo is part of the data storage and processing step.
 ## Introduction
 This repo contains code that allows for selecting and preprocessing image and video data for AWS Rekognition pipeline.
 
-Specifically, it contains scripts which get information about video and image files being used for deduplication purposes, get filesize information of image data, and deduplicate and provide additional processing for image data. It also provides scripts which allow the user to retrieve additional information from their Google BigQuery table (set up during the data collection step) as well as to trim videos they are interested in analyzing in order to economize compuational resources. 
+Specifically, it contains scripts which get information about video and image files being used for deduplication purposes, get file size information of image data, and deduplicate and provide additional processing for image data. It also provides scripts which allow the user to retrieve additional information from their Google BigQuery table (set up during the data collection step) as well as to trim videos they are interested in analyzing in order to economize computational resources. 
 
 ## Objective
 Each of our repos belongs to one or more of the the following categories:
@@ -60,7 +60,7 @@ Prior to running the scripts in this repo, please install the following dependen
 ### 3. Run the Scripts 
 In order to run the scrupts, keep in mind that '01-get-checksum-for-deduplication.ipynb' should be ran prior to '02-filter-data-for-audiovisual-analysis.ipynb'. Prior to running '01-get-checksum-for-deduplication.ipynb', you will have to change the lines of code `video_source_path = 'my-video-dir' image_source_path = 'my-image-dir'` and ``'def search_files(directory, filetype=None):'`` to match up with your data directories and the filetype you are attempt to target. 
 
-In order to run the trim-video.py' script, you will have to use the following bash code to get the ffmpeg value - `export PATH=/software/ffmpeg:/software/ffmpeg/bin:$PATH`. In addition, you will again have to make sure that the code referencing data directories matches up with your data directories. This is specifically in reference to '`video_dir = "my-video-directory"
+In order to run the 'trim-video.py' script, you will have to use the following bash code to get the ffmpeg value - `export PATH=/software/ffmpeg:/software/ffmpeg/bin:$PATH`. In addition, you will again have to make sure that the code referencing data directories matches up with your data directories. This is specifically in reference to '`video_dir = "my-video-directory"
 truncated_video_dir = "my-trimmed-video-directory"``
 
 The select_ad_metadata.sql script is different from the other ones in this repo in that it is an SQL script. It requires you to have a Google BigQuery table set up. This is done in the data collection step. 
