@@ -14,7 +14,7 @@ This repository is part of the data storage and processing step.
 ## Introduction
 This repository contains code that allows for selecting and preprocessing image and video data for the AWS Rekognition pipeline, as well as querying text ads data.
 
-Specifically, it contains scripts which obtain information about video and image files being used for deduplication purposes, get file size information of image data, and deduplicate and provide additional processing for image data. It also provides scripts which allow the user to retrieve additional information from their Google BigQuery table (set up during the data collection step) as well as to trim videos they are interested in analyzing in order to economize computational resources. Additionally, a script that selects text ads data is also provided. 
+Specifically, it contains scripts for video and image data preprocessing through deduplication, ads content filtering (for image data), and video trimming (in order to economize computational resources). It also provides scripts which allow users to retrieve metadata for video and image ads from their Google BigQuery table and text ads from their MySQL table (set up during the data collection step [Facebook](https://github.com/Wesleyan-Media-Project/fb_agg_reports_import/tree/main), [Google](https://github.com/Wesleyan-Media-Project/google_ads_archive)). Additionally, a script that selects text ads data is also provided. 
 
 
 ## Objective
