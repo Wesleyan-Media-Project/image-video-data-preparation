@@ -37,7 +37,9 @@ filename : the file name of the file being referenced <br>
 checksum : the checksum computed for the file being referenced <br>
 filesize (if table of image file information, not for video information table) : filesize of the file being referenced 
 
-`02-filter-data-for-audiovisual-analysis.ipynb` refines the data created by `01-get-checksum-for-deduplication.ipynb`, so `01-get-checksum-for-deduplication.ipynb` must be run first. The data returned by `02-filter-data-for-audiovisual-analysis.ipynb` is for the large part similar to that of `01-get-checksum-for-deduplication.ipynb`, so `01-get-checksum-for-deduplication.ipynb`, but with deduplication, the extraction of ad_id's when relevant, and the exclusion of screenshot images. With this in mind, the data created by `02-filter-data-for-audiovisual-analysis.ipynb` contains the following fields:   <br>
+`02-filter-data-for-audiovisual-analysis.ipynb` refines the data created by `01-get-checksum-for-deduplication.ipynb`, so `01-get-checksum-for-deduplication.ipynb` must be run first. The data returned by `02-filter-data-for-audiovisual-analysis.ipynb` is for the large part similar to that of `01-get-checksum-for-deduplication.ipynb`, but with deduplication, the extraction of ad_id's when relevant, and the exclusion of screenshot images done. 
+
+The data returned by `02-filter-data-for-audiovisual-analysis.ipynb` contains the following fields:   <br>
 
 filepath : the file path to get to the file being referenced <br>
 filename : the file name of the file being referenced <br>
@@ -62,7 +64,7 @@ Prior to running the scripts in this repo, please install the following dependen
 ### 3. Run the Scripts 
 In order to run the scripts, keep in mind that `01-get-checksum-for-deduplication.ipynb` should be run prior to `02-filter-data-for-audiovisual-analysis.ipynb`. Prior to running `01-get-checksum-for-deduplication.ipynb`, you will have to change the lines of code `video_source_path = 'my-video-dir' image_source_path = 'my-image-dir'` and ``'def search_files(directory, filetype=None):'`` to match up with your data directories and the filetype you are attempt to target. 
 
-In order to run the 'trim-video.py' script, you will have to use the following bash code to get the ffmpeg value - `export PATH=/software/ffmpeg:/software/ffmpeg/bin:$PATH`. In addition, you will again have to make sure that the code referencing data directories matches up with your data directories. This is specifically in reference to '`video_dir = "my-video-directory"
-truncated_video_dir = "my-trimmed-video-directory"``
+In order to run the 'trim-video.py' script, you will have to use the following bash code to get the ffmpeg value - `export PATH=/software/ffmpeg:/software/ffmpeg/bin:$PATH`. In addition, you will again have to make sure that the code referencing data directories matches up with your data directories. This is specifically in reference to the lines `video_dir = "my-video-directory" truncated_video_dir = "my-trimmed-video-directory"` 
+
 
 The select_ad_metadata.sql and text_ad_data_query.R scripts are different from the other ones in this repo in that they are or contain an SQL script. It requires you to have a Google BigQuery and/or a local MySQL database set up. This is done in the data collection step. 
