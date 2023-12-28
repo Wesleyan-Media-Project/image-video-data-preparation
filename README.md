@@ -50,11 +50,13 @@ ad_id : extracted ad ids from image files that are named following the ad it und
 The three query scripts in the `select-ad-metadata` folder select and save both text ads and metadata for all ads (including video and image ads) for Google and Facebook ads respectively. For Google ads, text ads and ads metadata are queried separately, one from MySQL via, the other from Google BigQuery. For Facebook ads, they are quried altogether from MySQL. 
 
 For Google ads: 
+
 `select-ad-metadata/get_google_metadata.sql` is an SQL query selecting metadata fields for image and video data and as such it returns a result table. 
 
 `select-ad-metadata/get_google_text_ads.R` selects text ads data fields from MySQL and save them into a csv file.
 
 For Facebook ads: 
+
 `select-ad-metadata/get_fb_metadata_and_text_ads.R` selects text ads as well as metadata information for all media types and save them into a csv file. 
 
 `trim-video.py` results in truncated videos (each 2 minutes long) inside of truncated_video_dir (your local path to save trimmed video files). 
