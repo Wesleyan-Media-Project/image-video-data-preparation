@@ -1,4 +1,4 @@
--- A query to retrieve additional information on ad-id level data and create a "master table"
+-- A query to retrieve additional information on Google ad-id level data and create a "master table"
 -- Replace "my-table" with your Google BigQuery table set up in the data collection step
 
 SELECT ad_id, ad_url, ad_type, advertiser_id, advertiser_name, date_range_start, date_range_end, num_of_days,

@@ -2,7 +2,7 @@ library(RMySQL)
 library(data.table)
 
 
-# Get text and ad information from the unicode friendly table
+# Get text ads information from the unicode friendly table
 
 # Create mySQL connection:
 
