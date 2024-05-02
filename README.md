@@ -80,21 +80,20 @@ The data returned by `02-filter-data-for-audiovisual-analysis.ipynb` contains th
 - `filesize` (if table of image file information, not for video information table): filesize of the file being referenced <br>
 - `ad_id`: extracted ad ids from image files that are named following the ad it underline filetype structure.
 
-`select-ad-metadata` folder stores three database query scripts. `get_fb_metadata_and_text_ads.R` and `get_google_text_ads.R` select and save query results tables into .csv files. The data returned by `get_google_metadata.sql` is a result table on Google BigQuery, which can be exported and saved into a .csv file.
+The `trim-video.py` script results in truncated videos (each 2 minutes long) inside of truncated_video_dir (your local path to save trimmed video files).
+
+The `select-ad-metadata` folder stores three database query scripts. `get_fb_metadata_and_text_ads.R` and `get_google_text_ads.R` select and save query results tables into .csv files. The data returned by `get_google_metadata.sql` is a result table on Google BigQuery, which can be exported and saved into a .csv file.
 
 The three query scripts in the `select-ad-metadata` folder select and save both text ads and metadata for all ads (including video and image ads) for Google and Facebook ads respectively. For Google ads, text ads and ads metadata are queried separately, one from MySQL via, the other from Google BigQuery. For Facebook ads, they are queried altogether from MySQL.
 
 For Google ads:
 
-`select-ad-metadata/get_google_metadata.sql` is an SQL query selecting metadata fields for image and video data and as such it returns a result table.
-
-`select-ad-metadata/get_google_text_ads.R` selects text ads data fields from MySQL and save them into a csv file.
+- `select-ad-metadata/get_google_metadata.sql` is an SQL query selecting metadata fields for image and video data and as such it returns a result table.
+- `select-ad-metadata/get_google_text_ads.R` selects text ads data fields from MySQL and save them into a csv file.
 
 For Facebook ads:
 
-`select-ad-metadata/get_fb_metadata_and_text_ads.R` selects text ads as well as metadata information for all media types and save them into a csv file.
-
-`trim-video.py` results in truncated videos (each 2 minutes long) inside of truncated_video_dir (your local path to save trimmed video files).
+- `select-ad-metadata/get_fb_metadata_and_text_ads.R` selects text ads as well as metadata information for all media types and save them into a csv file.
 
 ## 5. Thank You
 
