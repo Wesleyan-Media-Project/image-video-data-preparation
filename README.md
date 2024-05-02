@@ -65,20 +65,20 @@ When you run `01-get-checksum-for-deduplication.ipynb` and `02-filter-data-for-a
 
 The data created by `01-get-checksum-for-deduplication.ipynb` (saved as either `outfile.csv`, `google2022_video_info.csv` or `google2022_image_info'.csv`) contains the following fields: <br>
 
-`filepath`: the file path to get to the file being referenced <br>
-`filename`: the file name of the file being referenced <br>
-`checksum`: the checksum computed for the file being referenced <br>
-`filesize` (if table of image file information, not for video information table): filesize of the file being referenced
+- `filepath`: the file path to get to the file being referenced <br>
+- `filename`: the file name of the file being referenced <br>
+- `checksum`: the checksum computed for the file being referenced <br>
+- `filesize` (if table of image file information, not for video information table): filesize of the file being referenced
 
 `02-filter-data-for-audiovisual-analysis.ipynb` refines the data created by `01-get-checksum-for-deduplication.ipynb`. The data returned is largely similar to that of `01-get-checksum-for-deduplication.ipynb`, but with deduplication, the extraction of ad_id's when relevant, and the exclusion of screenshot images done.
 
 The data returned by `02-filter-data-for-audiovisual-analysis.ipynb` contains the following fields: <br>
 
-`filepath`: the file path to get to the file being referenced <br>
-`filename`: the file name of the file being referenced <br>
-`checksum`: the checksum computed for the file being referenced <br>
-`filesize` (if table of image file information, not for video information table): filesize of the file being referenced <br>
-`ad_id`: extracted ad ids from image files that are named following the ad it underline filetype structure.
+- `filepath`: the file path to get to the file being referenced <br>
+- `filename`: the file name of the file being referenced <br>
+- `checksum`: the checksum computed for the file being referenced <br>
+- `filesize` (if table of image file information, not for video information table): filesize of the file being referenced <br>
+- `ad_id`: extracted ad ids from image files that are named following the ad it underline filetype structure.
 
 `select-ad-metadata` folder stores three database query scripts. `get_fb_metadata_and_text_ads.R` and `get_google_text_ads.R` select and save query results tables into .csv files. The data returned by `get_google_metadata.sql` is a result table on Google BigQuery, which can be exported and saved into a .csv file.
 
