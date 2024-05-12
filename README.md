@@ -9,17 +9,16 @@ To analyze the different dimensions of political ad transparency we have develop
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Setup](#setup)
-- [Results Storage](#results-storage)
-- [Setup](#setup)
-- [Thank You!](#thank-you)
+- [1. Overview](#overview)
+- [2. Setup](#setup)
+- [3. Results Storage](#results-storage)
+- [4. Thank You!](#thank-you)
 
-## Overview
+## 1. Overview
 
 This repository contains scripts for video and image data preprocessing through deduplication, ads content filtering (for image data), and video trimming (in order to economize computational resources). It also provides scripts which allow users to retrieve metadata for video and image ads from their Google BigQuery table and text ads from their MySQL table (set up during the data collection step [Facebook](https://github.com/Wesleyan-Media-Project/fb_agg_reports_import/tree/main), [Google](https://github.com/Wesleyan-Media-Project/google_ads_archive)). Additionally, a script that selects text ads data is also provided.
 
-## Setup
+## 2. Setup
 
 ### 1. Install Relevant Software
 
@@ -59,7 +58,7 @@ In addition, you will again have to make sure that the code referencing data dir
 
 **NOTE**: The query scripts located in `select-ad-metadata` are different from the other ones in this repo in that they are or contain an SQL script. It requires you to have a Google BigQuery and/or a local MySQL database set up. This is done in the Data Collection step.
 
-## Results Storage
+## 3. Results Storage
 
 When you run `01-get-checksum-for-deduplication.ipynb` and `02-filter-data-for-audiovisual-analysis.ipynb`, the results are saved in an `output` folder. The data will be in `csv` format.
 
@@ -95,7 +94,7 @@ For Facebook ads:
 
 - `select-ad-metadata/get_fb_metadata_and_text_ads.R` selects text ads as well as metadata information for all media types and save them into a csv file.
 
-## 5. Thank You
+## 4. Thank You
 
 <p align="center"><strong>We would like to thank our financial supporters!</strong></p><br>
 
