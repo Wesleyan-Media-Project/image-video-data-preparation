@@ -1,4 +1,4 @@
-# Wesleyan Media Project - Image-Video-Data-Preparation
+# Wesleyan Media Project - Image Video Data Preparation
 
 Welcome! This repository contains code that allows for selecting and preprocessing image and video data for the AWS Rekognition pipeline, as well as querying text ads data.
 
